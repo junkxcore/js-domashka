@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html>
+  <head> </head>
+  <body>
+
+    <script>
+var A = [1, 4, 2, 6, 5, 3];
+alert('до пузырьковой сотритовки: ' + A);
+
+function puzirki(A)       
+{                          
+    for (var i = 0; i < 5; i++)
+     { for (var j = 0; j < 5-i; j++)
+        { if (A[j+1] < A[j])
+           { var t = A[j+1]; A[j+1] = A[j]; A[j] = t;
+           }
+        }
+     }                     
+    return A;    
+}
+
+puzirki(A);
+alert('после пузырьковой сотритовки: ' + A);
+
+
+
+    </script>
+
+  </body>
+</html>
